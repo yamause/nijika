@@ -8,6 +8,7 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.11"
 discord-py = "^2.3.0"
+deepl = "^1.15.0"
 
 [tool.poetry.group.dev.dependencies]
 isort = "^5.12.0"
