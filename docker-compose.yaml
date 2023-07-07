@@ -1,0 +1,9 @@
+version: "3"
+services:
+  bot:
+    restart: always
+    build: .
+    environment:
+      DISCORD_BOT_TOKEN: "${DISCORD_BOT_TOKEN}"
+      DEEPL_AUTHKEY: "${DEEPL_AUTHKEY}"
+    entrypoint: "nijika-run"
