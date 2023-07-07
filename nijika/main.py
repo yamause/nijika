@@ -20,7 +20,7 @@ async def load_cog():
     """cogファイルを読み込むコルーチン"""
 
     # Cogファイルはcogsディレクトリにすべてまとめる.
-    cogs_dirpath = "cogs"
+    cogs_dirpath = "nijika/cogs"
     cogs_dir = Path(cogs_dirpath)
     cogs_dir.glob("*.py")
 
@@ -30,5 +30,11 @@ async def load_cog():
             )
 
 
-asyncio.run(load_cog())
-bot.run(DISCORD_BOT_TOKEN)
+def run():
+    os.chdir(os.path.dirname(os.path.abspath(f"{__file__}/../")))
+    asyncio.run(load_cog())
+    bot.run(DISCORD_BOT_TOKEN)
+
+
+if __name__ == "__main__":
+    run()
