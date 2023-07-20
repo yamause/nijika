@@ -6,7 +6,7 @@ dev deploy:
   tags:
     - dev
   script:
-    - pwd
+    - cd .. && nijika dev-nijika
     - export DISCORD_BOT_TOKEN=$DEV_DISCORD_BOT_TOKEN
     - docker-compose build
     - docker-compose up -d
@@ -17,7 +17,7 @@ prd deploy:
   tags:
     - prd
   script:
-    - pwd
+    - cd .. && nijika prd-nijika
     - export DISCORD_BOT_TOKEN=$PRD_DISCORD_BOT_TOKEN
     - docker-compose build
     - docker-compose up -d
