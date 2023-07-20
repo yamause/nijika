@@ -4,7 +4,5 @@ default:
 
 build_image:
   script:
-    - pwd
-    - poetry shell
     - docker build -t my-docker-image .
     - docker run my-docker-image .
