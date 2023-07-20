@@ -4,6 +4,6 @@ default:
 
 build_image:
   script:
-    - ls -la
+    - poetry shell
     - docker build -t my-docker-image .
     - docker run my-docker-image .
