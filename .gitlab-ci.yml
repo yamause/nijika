@@ -6,5 +6,3 @@ build_image:
   script:
     - docker build -t .
     - docker run /script/to/run/tests
-  only:
-    - merge_requests
