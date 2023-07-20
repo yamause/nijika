@@ -9,6 +9,8 @@ dev deploy:
     - export DISCORD_BOT_TOKEN="{$DEV_DISCORD_BOT_TOKEN}"
     - docker-compose build
     - docker-compose up -d
+  only:
+    - branches
 
 prd deploy:
   tags:
@@ -17,3 +19,5 @@ prd deploy:
     - export DISCORD_BOT_TOKEN="{$PRD_DISCORD_BOT_TOKEN}"
     - docker-compose build
     - docker-compose up -d
+  only:
+    - tags
