@@ -9,7 +9,9 @@ dev deploy:
     - export DISCORD_BOT_TOKEN=$DEV_DISCORD_BOT_TOKEN
     - docker-compose -p dev up -d
   only:
-    - branches
+    - main@gitlab-org/gitlab
+  except:
+    - /^release/.*$/@gitlab-org/gitlab
 
 prd deploy:
   tags:
