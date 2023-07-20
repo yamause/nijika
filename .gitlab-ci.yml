@@ -4,5 +4,6 @@ default:
 
 build_image:
   script:
+    - la -la
     - docker build -t my-docker-image .
     - docker run my-docker-image .
