@@ -6,7 +6,7 @@ dev deploy:
   tags:
     - dev
   script:
-    - export DISCORD_BOT_TOKEN="{$DEV_DISCORD_BOT_TOKEN}"
+    - export DISCORD_BOT_TOKEN=$DEV_DISCORD_BOT_TOKEN
     - docker-compose build
     - docker-compose up -d
   only:
@@ -16,7 +16,7 @@ prd deploy:
   tags:
     - prd
   script:
-    - export DISCORD_BOT_TOKEN="{$PRD_DISCORD_BOT_TOKEN}"
+    - export DISCORD_BOT_TOKEN=$PRD_DISCORD_BOT_TOKEN
     - docker-compose build
     - docker-compose up -d
   only:
