@@ -9,9 +9,9 @@ dev deploy:
     - export DISCORD_BOT_TOKEN=$DEV_DISCORD_BOT_TOKEN
     - docker-compose -p dev up -d
   only:
-    - main@gitlab-org/gitlab
+    - main@nev-yo-sv-gitlab-01.asaasahi.com/neverneband/nijika
   except:
-    - /^release/.*$/@gitlab-org/gitlab
+    - /^release/.*$/@nev-yo-sv-gitlab-01.asaasahi.com/neverneband/nijika
 
 prd deploy:
   tags:
