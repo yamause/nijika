@@ -4,5 +4,5 @@ default:
 
 build_image:
   script:
-    - docker-compose build -t my-docker-image .
-    - docker-compose up my-docker-image
+    - docker-compose build .
+    - docker-compose up -d
