@@ -7,7 +7,7 @@ dev deploy:
     - dev
   script:
     - export DISCORD_BOT_TOKEN=$DEV_DISCORD_BOT_TOKEN
-    - docker-compose up -d -p another-name ps -a 
+    - docker-compose up -p dev -d
   only:
     - branches
 
@@ -16,6 +16,6 @@ prd deploy:
     - prd
   script:
     - export DISCORD_BOT_TOKEN=$PRD_DISCORD_BOT_TOKEN
-    - docker-compose up -d -p another-name ps -a 
+    - docker-compose up -p prd -d
   only:
     - tags
