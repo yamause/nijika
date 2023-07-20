@@ -1,18 +1,10 @@
-image: docker:20.10.15
+default:
+  before_script:
+    - docker info
 
-services:
-  - docker:20.10.15-dind
-
-variables:
-  DOCKER_DRIVER: ./
-  DOCKER_TLS_CERTDIR: ""
-
-before_script:
-  - docker info
-
-test_ci:
+build_image:
   script:
-    - docker pull alpine:latest
-    - docker run alpine:latest cat /etc/alpine-release
-  tags:
-    - tag-runner
+    - docker build -t .
+    - docker run /script/to/run/tests
+  only:
+    - merge_requests
