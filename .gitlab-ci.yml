@@ -6,11 +6,8 @@ dev deploy:
   tags:
     - dev
   script:
-    - cd .. && mv nijika dev-nijika && cd dev-nijika
     - export DISCORD_BOT_TOKEN=$DEV_DISCORD_BOT_TOKEN
-    - docker-compose build
-    - docker-compose up -d
-    - cd .. && rm -rf dev-nijika
+    - docker-compose up -d -p another-name ps -a 
   only:
     - branches
 
@@ -18,10 +15,7 @@ prd deploy:
   tags:
     - prd
   script:
-    - cd .. && mv nijika prd-nijika && cd prd-nijika
     - export DISCORD_BOT_TOKEN=$PRD_DISCORD_BOT_TOKEN
-    - docker-compose build
-    - docker-compose up -d
-    - cd .. && rm -rf prd-nijika
+    - docker-compose up -d -p another-name ps -a 
   only:
     - tags
