@@ -1,0 +1,10 @@
+# poetry
+poetry.lock
+
+# python venv
+*venv*
+.env
+
+# python
+__pycache__
+dist/
